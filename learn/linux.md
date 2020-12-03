@@ -22,13 +22,16 @@
 * 对于已经在执行的命令，可以 ctrl+z 暂停， 然后使用 bg 放到后台执行
 * 前两种的缺点是退出终端shell时会发hangup信号给子进程，子进程收到后会退出。
 如果想在退出shell终端后继续执行，需要使用nohup忽略hangup信号。eg : nohup java -jar xx.jar &
+
 ### 3 xargs 是做什么的？uniq？sed？
 * xargs: 从标准输入中读取内容，将此内容传递给它需要协助的命令，作为那个命令的参数
 一般与管道一起使用，可以将前一个命令的标准输出转换为命令参数。 而且xargs的标准输入中的 制表符，换行符，空格都将被空格取代
 [xargs参考资料](http://c.biancheng.net/linux/xargs.html)
 * uniq: 去重，一般与sort一起使用
 * sed： 处理文本文件
-#### 4 shell脚本统计java代码行数  
+* 
+### 4 shell脚本统计java代码行数  
 wc -l xx.txt
+
 ### 5 如何杀死服务器上所有的java进程？ 
 ps aux |grep java |grep -v "grep" |awk '{print $2}' |xargs kill -9
