@@ -74,7 +74,7 @@
 * -XX:ParallelGCThreads=N
 * 默认线程数是根据cpu算出来的  并发线程数= 8+（（N-8）*5/8）
 
-垃圾回收工具
+垃圾回收工具-gc日志
 * gc日志默认关闭，开启gc日志： -verbose:gc (等价于 -XX:+PrintGC) ，-XX:+PrintGCDetails
 * -XX:+PrintGCTimeStamps       -XX:+PrintGCDateStamps 打印时间戳
 * -Xloggc:filename  日志文件输出地址，默认是标准输出
